@@ -1,4 +1,5 @@
 #include "ClassFigure.h"
+#include<iostream>
 
 Figure::Figure() : coordinates({ 0,0 }), color("White") {}
 
@@ -18,6 +19,7 @@ std::vector<int> Figure::GetCoordinates() {
 std::string Figure::GetColor() {
 	return color;
 }
+
 bool Figure::SetCoordinates(std::vector<int>& temp) {
 	if (temp.size() > 2 || temp[0] < 0 || temp[1] < 0) {
 		return false;
@@ -25,6 +27,7 @@ bool Figure::SetCoordinates(std::vector<int>& temp) {
 	coordinates = temp;
 	return true;
 }
+
 bool Figure::SetColor(std::string& temp) {
 	if (temp.length() == 0) {
 		return false;
@@ -32,3 +35,18 @@ bool Figure::SetColor(std::string& temp) {
 	color = temp;
 	return true;
 }
+
+void Figure::printRectangle(int height, int& widht) {
+	for (int i = 0; i < height; i++) {
+		for (int j = 0; j < widht; j++) {
+			if (i == 0 || i == height) {
+				std::cout << "-";
+			}
+			else if (j == 0 || j == widht) {
+				std::cout << "|";
+			}
+		}
+		std::cout << "\n";
+	}
+}
+
