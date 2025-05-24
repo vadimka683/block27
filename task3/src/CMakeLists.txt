@@ -9,7 +9,7 @@ project ("task3")
 
 set(MY_INCLUDE_DIR ${CMAKE_SOURCE_DIR}/include)
 
-add_executable (task3 task3.cpp ClassTree.cpp ClassNode.cpp)
+add_executable (task3 task3.cpp ClassNode.cpp)
 
 target_include_directories(task3 PUBLIC ${MY_INCLUDE_DIR})
 

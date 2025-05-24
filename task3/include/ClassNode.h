@@ -4,10 +4,11 @@
 
 class Node {
 private:
-	std::vector<Node*> child;
+	std::vector<Node*> childs;
+	int number;
 	std::string name;
 public:
-	std::string getName();
-	Node(std::string name);
-	void pushNewChild(Node* child);
+	Node(int& counterChild);
+	void searcheParents(int num, bool& searchStatus, bool& searchStatus1);
+	void printChilds(int num);
 };
