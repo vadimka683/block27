@@ -1,8 +1,7 @@
-﻿// task3.h : включаемый файл для стандартных системных включаемых файлов
-// или включаемые файлы для конкретного проекта.
-
-#pragma once
-
+﻿#pragma once
 #include <iostream>
+#include<vector>
+#include "ClassNode.h"
 
-// TODO: установите здесь ссылки на дополнительные заголовки, требующиеся для программы.
+static void printNeibors(std::vector<int>& neibors);
+static void searchNeibors(Node* root, int user_number);

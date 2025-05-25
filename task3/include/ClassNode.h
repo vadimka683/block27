@@ -8,7 +8,8 @@ private:
 	int number;
 	std::string name;
 public:
-	Node(int& counterChild);
-	void searcheParents(int num, bool& searchStatus, bool& searchStatus1);
+	Node(int& counterChild, std::string& parantName);
+	void searcheParents(int num, bool& searchStatus, bool& searchStatus1, std::vector<int>& neibors);
 	void printChilds(int num);
+	void printTree();
 };
