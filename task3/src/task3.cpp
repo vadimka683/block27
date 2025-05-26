@@ -24,8 +24,14 @@ int main()
 	srand(time(NULL));
 	int counterChild = 1;
 	std::string name = "Elf 1";
-	Node* root = new Node(counterChild, name);
-	root->printTree();
+	//Node* root = new Node(counterChild, name);
+	Node* root = new Node(counterChild);
+	bool chek = false;
+	for (int i = 0; i < 54;i++) {
+		counterChild++;
+		root->addChild(root, counterChild, chek);
+	}
+	root->printChilds(1);
 	do {
 		std::cout << "Input your number for search neibors or -1 for exit: ";
 		int answer;
