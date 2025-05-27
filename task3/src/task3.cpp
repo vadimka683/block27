@@ -24,10 +24,10 @@ int main()
 	srand(time(NULL));
 	int counterChild = 1;
 	std::string name = "Elf 1";
-	//Node* root = new Node(counterChild, name);
-	Node* root = new Node(counterChild);
+	std::string nodeName = "Node 1";
+	Node* root = new Node(counterChild, nodeName, 1);
 	bool chek = false;
-	for (int i = 0; i < 54;i++) {
+	for (int i = 0; i < 16;i++) {
 		counterChild++;
 		root->addChild(root, counterChild, chek);
 	}

@@ -6,13 +6,12 @@ class Node {
 private:
 	std::vector<Node*> childs;
 	int number;
-	std::string name;
+	std::string nameNode;
+	std::string nameElf;
 public:
-	Node(int& counterChild, std::string& parantName);// auto Tree
-	Node(int number);
+	Node(int number, std::string nameParent, int numberInArrayChild);
 	void searcheParents(int num, bool& searchStatus, bool& searchStatus1, std::vector<int>& neibors);
 	void printChilds(int num);
-	void printTree();
 	int chekFreeLotForChild();
 	void addChild(Node* &root, int number, bool& itPushed);
 };
