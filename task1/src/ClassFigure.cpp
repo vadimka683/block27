@@ -36,14 +36,17 @@ bool Figure::SetColor(std::string& temp) {
 	return true;
 }
 
-void Figure::printRectangle(int height, int& widht) {
+void Figure::printRectangle(double height, double& widht) {
 	for (int i = 0; i < height; i++) {
 		for (int j = 0; j < widht; j++) {
-			if (i == 0 || i == height) {
+			if (i == 0 || i == height - 1) {
 				std::cout << "-";
 			}
-			else if (j == 0 || j == widht) {
+			else if (j == 0 || j == widht - 1) {
 				std::cout << "|";
+			}
+			else {
+				std::cout << " ";
 			}
 		}
 		std::cout << "\n";

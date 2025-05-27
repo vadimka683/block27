@@ -3,8 +3,9 @@
 
 class Circle : public Figure {
 private:
-	int radius;
+	double radius;
 public:
+	Circle();
 	void square();
 	void rectangle();
 };

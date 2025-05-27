@@ -3,8 +3,9 @@
 
 class Square : public Figure {
 private:
-	int lenght_edge;
+	double lenght_edge;
 public:
+	Square();
 	void square();
 	void rectangle();
 };

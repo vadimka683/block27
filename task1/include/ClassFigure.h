@@ -15,5 +15,5 @@ public:
 	std::string GetColor();
 	bool SetCoordinates(std::vector<int>& temp);
 	bool SetColor(std::string& temp);
-	static void printRectangle(int height, int& widht);
+	static void printRectangle(double height, double& widht);
 };

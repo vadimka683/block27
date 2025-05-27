@@ -3,8 +3,9 @@
 class Rectangle : public Figure 
 {
 private:
-	int height, widht;
+	double height, widht;
 public:
+	Rectangle();
 	void square();
 	void rectangle();
 };

@@ -3,8 +3,9 @@
 class Triangle : public Figure
 {
 private:
-	int lenght_edge;
+	double lenght_edge;
 public:
+	Triangle();
 	void square();
 	void rectangle();
 };

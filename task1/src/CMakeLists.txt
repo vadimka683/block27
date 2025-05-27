@@ -9,8 +9,7 @@ project ("task1")
 
 set(MY_INCLUDE_DIR ${CMAKE_SOURCE_DIR}/include)
 
-add_executable (task1 main1.cpp ClassCircle.cpp ClassFigure.cpp ClassRectangle.cpp ClassSquare.cpp ClassTriangle.cpp 
-		${MY_INCLUDE_DIR}/ClassCircle.h ${MY_INCLUDE_DIR}/ClassFigure.h ${MY_INCLUDE_DIR}/ClassRectangle.h ${MY_INCLUDE_DIR}/ClassSquare.h ${MY_INCLUDE_DIR}/ClassTriangle.h)
+add_executable (task1 main1.cpp ClassCircle.cpp ClassFigure.cpp ClassRectangle.cpp ClassSquare.cpp ClassTriangle.cpp)
 
 target_include_directories(task1 PUBLIC ${MY_INCLUDE_DIR})
 
