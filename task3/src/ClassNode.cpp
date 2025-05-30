@@ -31,9 +31,14 @@ void Node::printChilds(int num) {
 
 void Node::searcheParents(int num, bool& searchStatus, bool& searchStatus1, std::vector<int>& neibors) {
 	if (number == num) {
-		searchStatus = true;
 		for (int i = 0; i < childs.size();i++) {
 			neibors.push_back(childs[i]->number);
+		}
+		if (childs.size() == 0) {
+			searchStatus = true;
+		}
+		else {
+			searchStatus1 = true;
 		}
 		return;
 	}
@@ -52,11 +57,14 @@ void Node::searcheParents(int num, bool& searchStatus, bool& searchStatus1, std:
 				}
 				neibors.push_back(childs[i]->number);
 			}
+			neibors.push_back(number);
 			searchStatus1 = true;
 			break;
 		}
 	}
 }
+
+
 
 int Node::chekFreeLotForChild() {
 	std::vector<int> lowChildArray;
